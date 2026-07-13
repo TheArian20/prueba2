@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calendario | AulaX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.day{
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.day:hover{
+
+transform:translateY(-5px);
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.today{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.events{
+
+margin-top:40px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
+
+}
+
+.event{
+
+background:white;
+
+padding:25px;
+
+border-left:6px solid #2563eb;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.event h3{
+
+margin-bottom:10px;
+
+}
+
+.event p{
+
+margin:8px 0;
+
+color:#555;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>AulaX</h2>
+
+<a href="index.html">🏠 Inicio</a>
+<a href="cursos.html">📚 Mis Cursos</a>
+<a href="clases.html">🎥 Clases</a>
+<a href="tareas.html">📝 Tareas</a>
+<a href="calificaciones.html">📊 Calificaciones</a>
+<a href="chat.html">💬 Chat</a>
+<a href="calendario.html">📅 Calendario</a>
+<a href="configuracion.html">⚙ Configuración</a>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<div>
+
+<h1>📅 Calendario Académico</h1>
+
+<p>Consulta tus próximas actividades.</p>
+
+</div>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+</div>
+
+</header>
+
+<h2>Julio 2026</h2>
+
+<div class="calendar">
+
+<div class="day">1</div>
+<div class="day">2</div>
+<div class="day">3</div>
+<div class="day">4</div>
+<div class="day">5</div>
+<div class="day">6</div>
+<div class="day">7</div>
+
+<div class="day">8</div>
+<div class="day">9</div>
+<div class="day">10</div>
+<div class="day">11</div>
+<div class="day">12</div>
+<div class="day today">13</div>
+<div class="day">14</div>
+
+<div class="day">15</div>
+<div class="day">16</div>
+<div class="day">17</div>
+<div class="day">18</div>
+<div class="day">19</div>
+<div class="day">20</div>
+<div class="day">21</div>
+
+<div class="day">22</div>
+<div class="day">23</div>
+<div class="day">24</div>
+<div class="day">25</div>
+<div class="day">26</div>
+<div class="day">27</div>
+<div class="day">28</div>
+
+<div class="day">29</div>
+<div class="day">30</div>
+<div class="day">31</div>
+
+</div>
+
+<h2 style="margin-top:50px;">Próximos Eventos</h2>
+
+<div class="events">
+
+<div class="event">
+
+<h3>🎥 Clase en Vivo</h3>
+
+<p><strong>Fecha:</strong> 15 Julio</p>
+
+<p><strong>Hora:</strong> 8:00 PM</p>
+
+<p>Desarrollo Web Full Stack.</p>
+
+</div>
+
+<div class="event">
+
+<h3>📝 Entrega de Tarea</h3>
+
+<p><strong>Fecha:</strong> 20 Julio</p>
+
+<p>Landing Page HTML y CSS.</p>
+
+</div>
+
+<div class="event">
+
+<h3>📚 Examen</h3>
+
+<p><strong>Fecha:</strong> 25 Julio</p>
+
+<p>Evaluación de JavaScript.</p>
+
+</div>
+
+<div class="event">
+
+<h3>🏆 Proyecto Final</h3>
+
+<p><strong>Fecha:</strong> 10 Agosto</p>
+
+<p>Entrega del sistema AulaX.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

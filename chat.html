@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chat | AulaX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.chat-container{
+display:flex;
+height:75vh;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contacts{
+width:280px;
+background:#1f2937;
+color:white;
+padding:20px;
+overflow:auto;
+}
+
+.contacts h2{
+margin-bottom:20px;
+}
+
+.contact{
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+background:#374151;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact:hover{
+background:#2563eb;
+}
+
+.chat-area{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.chat-header{
+padding:20px;
+background:#2563eb;
+color:white;
+font-size:20px;
+font-weight:bold;
+}
+
+.messages{
+flex:1;
+padding:20px;
+overflow:auto;
+background:#f3f4f6;
+}
+
+.message{
+max-width:70%;
+padding:12px 18px;
+margin-bottom:15px;
+border-radius:15px;
+}
+
+.teacher{
+background:#2563eb;
+color:white;
+}
+
+.student{
+background:white;
+margin-left:auto;
+}
+
+.chat-input{
+display:flex;
+padding:20px;
+background:white;
+border-top:1px solid #ddd;
+}
+
+.chat-input input{
+flex:1;
+padding:12px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.chat-input button{
+margin-left:10px;
+padding:12px 25px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.chat-input button:hover{
+background:#1d4ed8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>AulaX</h2>
+
+<a href="index.html">🏠 Inicio</a>
+<a href="cursos.html">📚 Mis Cursos</a>
+<a href="clases.html">🎥 Clases</a>
+<a href="tareas.html">📝 Tareas</a>
+<a href="calificaciones.html">📊 Calificaciones</a>
+<a href="chat.html">💬 Chat</a>
+<a href="calendario.html">📅 Calendario</a>
+<a href="configuracion.html">⚙ Configuración</a>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<div>
+
+<h1>💬 Chat del Curso</h1>
+
+<p>Comunícate con profesores y compañeros.</p>
+
+</div>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+</div>
+
+</header>
+
+<div class="chat-container">
+
+<div class="contacts">
+
+<h2>Conversaciones</h2>
+
+<div class="contact">👨‍🏫 Profesor Juan</div>
+
+<div class="contact">👩‍🏫 Profesora Ana</div>
+
+<div class="contact">👨 Carlos</div>
+
+<div class="contact">👩 María</div>
+
+<div class="contact">📢 Grupo HTML</div>
+
+<div class="contact">📢 Grupo React</div>
+
+</div>
+
+<div class="chat-area">
+
+<div class="chat-header">
+
+Profesor Juan Pérez
+
+</div>
+
+<div class="messages" id="messages">
+
+<div class="message teacher">
+
+Buenos días 😊<br>
+
+Hoy veremos Flexbox.
+
+</div>
+
+<div class="message student">
+
+Perfecto profesor.
+
+</div>
+
+<div class="message teacher">
+
+Recuerden entregar la tarea antes del viernes.
+
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="mensaje"
+placeholder="Escribe un mensaje...">
+
+<button onclick="enviarMensaje()">
+
+Enviar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function enviarMensaje(){
+
+let input=document.getElementById("mensaje");
+
+if(input.value.trim()=="") return;
+
+let mensajes=document.getElementById("messages");
+
+let div=document.createElement("div");
+
+div.className="message student";
+
+div.innerHTML=input.value;
+
+mensajes.appendChild(div);
+
+mensajes.scrollTop=mensajes.scrollHeight;
+
+input.value="";
+
+}
+
+</script>
+
+</body>
+
+</html>
